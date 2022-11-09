@@ -1,7 +1,7 @@
 # Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 
 pkgbase=linux-g14
-pkgver=6.0.5.arch1
+pkgver=6.0.7.arch1
 pkgrel=1
 pkgdesc='Linux'
 _srctag=v${pkgver%.*}-${pkgver##*.}
@@ -23,7 +23,7 @@ source=(
   "choose-gcc-optimization.sh"
 
   "sys-kernel_arch-sources-g14_files-0004-5.17+--more-uarches-for-kernel.patch"::"https://raw.githubusercontent.com/graysky2/kernel_compiler_patch/master/more-uarches-for-kernel-5.17+.patch"
-  "sys-kernel_arch-sources-g14_files-0005-lru-multi-generational.patch"
+  # "sys-kernel_arch-sources-g14_files-0005-lru-multi-generational.patch"
 
   0001-acpi-proc-idle-skip-dummy-wait.patch
   0001-ACPI-x86-s2idle-Move-_HID-handling-for-AMD-systems-i.patch
@@ -63,6 +63,10 @@ source=(
   "sys-kernel_arch-sources-g14_files-0047-asus-nb-wmi-Add-tablet_mode_sw-lid-flip.patch"
   "sys-kernel_arch-sources-g14_files-0048-asus-nb-wmi-fix-tablet_mode_sw_int.patch"
   "sys-kernel_arch-sources-g14_files-0049-ALSA-hda-realtek-Add-quirk-for-ASUS-M16-GU603H.patch"
+  # "7259d1c92f03d27d913f2c35968e70117e6fc98f.patch"
+  # "8a1a7d7445c925acc6aec4de163ff91616653aaa.patch"
+  "dc65904df4d244d734fd4c9b550ad5a43a17a326.patch"
+  "drm-amdgpu-workaround-for-TLB-seq-race.patch"
 )
 
 validpgpkeys=(

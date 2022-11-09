@@ -6,7 +6,7 @@
 
 # NOTE: you can send environment variables to chroot/makepkg by stuffing them on the end of the makechrootpkg command after --
 
-CHROOT="$HOME/work/arch-kernels/build-chroot"
+CHROOT="$HOME/projects/arch-kernels/build-chroot"
 
 fatal() { echo "$@" >&2; exit 1; }
 # look for a PKGBUILD
@@ -38,4 +38,4 @@ fi
 #   `rbuild.sh -- {any makepkg flags} VAR=VALUE VAR2=VALUE etc..`
 #
 
-makechrootpkg -c -r "${CHROOT}" "$@"
+buildpkg -c -r "${CHROOT}" "$@"
